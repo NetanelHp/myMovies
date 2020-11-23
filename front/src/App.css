@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.darkTheme {
+  background-color: black;
+  color: white;
+}
+
+/*Login Section */
+.loginSection {
+  padding: 0px 100px;
+  display: flex;
+}
+
+.loginContent {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginText h1 {
+  font-weight: lighter;
+  margin-bottom: 0;
+  float: left;
+  font-size: 64px;
+  text-transform: uppercase;
+}
+
+.loginText p {
+  margin: 0px 25px 100px 0px;
+  font-size: 30px;
+  float: right;
+  text-transform: uppercase;
+}
+
+.loginImage img {
+  width: 70%;
+}
+
+.loginForm {
+  flex: 0.8;
+}
+
+.formContainer {
+  margin: auto;
+  padding-top: 60px;
+  align-items: center;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer .textField {
+  margin: 12px 0px;
+}
+
+/* Register Section */
+
+.registerSection {
+  padding: 0px 100px;
+  display: flex;
+}
+
+.registerContent {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerText h1 {
+  font-weight: lighter;
+  margin-bottom: 0;
+  float: left;
+  font-size: 64px;
+  text-transform: uppercase;
+}
+
+.registerText p {
+  margin: 0px 50px 100px 0px;
+  font-size: 30px;
+  float: right;
+  text-transform: uppercase;
+}
+
+.registerImage img {
+  width: 70%;
+}
+
+.registerForm {
+  flex: 0.8;
+}
+
+/* Alerts */
+
+.alert {
+  animation: fadeIn ease 1.5s;
+  margin: 10px 0px;
+}
+
+/*Welcome Section */
+
+.welcomeSection {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heroTitle {
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+  flex: 1;
+  padding: 0px 50px;
+  letter-spacing: 0.2rem;
+}
+
+.heroTitle p {
+  margin-top: 0;
+}
+
+.heroTitle span {
+  color: #ff6584;
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.heroImage img {
+  width: 65%;
+}
+
+/*Movies Section */
+
+.moviesSection {
+  text-align: center;
+}
+
+.moviesGrid {
+  animation: fadeIn ease 0.6s;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.imageWraper {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.imageWraper img:hover {
+  transform: scale(1.06);
+}
+
+.imageWraper img {
+  cursor: pointer;
+  transition: ease 0.4s;
+  border-radius: 35px;
+  box-shadow: 2px 0px 12px rgba(0, 0, 0, 0.4);
+}
+
+.searchInput {
+  border-radius: 30px;
+  outline: 0;
+}
+
+/* Movie Desc */
+
+.movieDescSection {
+  display: flex;
+  justify-content: space-between;
+  height: 93vh;
+}
+
+.movieDescImage {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.movieDescImage .imageWrapper {
+  width: 100%;
+  height: 650px;
+  border-radius: 15px;
+  filter: drop-shadow(2px 2px 15px rgba(0, 0, 0, 0.4));
+  overflow: hidden;
+  transition: ease-in-out 1.5s;
+}
+
+.movieDescImage .imageWrapper img {
+  height: 100%;
+  animation: fadeIn ease-in-out 1.2s, upInImage ease-in-out 1s forwards;
+}
+
+.movieDescContent {
+  flex: 1;
+  padding: 30px;
+}
+
+.movieDescContent .titleDesc {
+  opacity: 0;
+  animation: fadeIn ease-in 1.3s 0.3s forwards;
+}
+
+.movieDescImage .imageWrapper:hover {
+  transform: scale(0.97);
+}
+
+.detailsDesc {
+  display: flex;
+  justify-content: space-around;
+}
+
+.detailsDesc .card {
+  text-align: center;
+}
+
+.detailsDesc .vote {
+  animation: fadeIn ease 1.2s 0.8s backwards;
+}
+
+.detailsDesc .releaseDate {
+  animation: fadeIn ease 1.2s 1s backwards;
+}
+
+.detailsDesc .runTime {
+  animation: fadeIn ease 1.2s 1.2s backwards;
+}
+
+.MuiOutlinedInput-root {
+  height: 35px !important;
+  border-radius: 50px !important;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.MuiButton-root {
+  border-radius: 25px !important;
+}
+
+.siteDesc {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+  animation: fadeIn ease 1s 1.5s backwards, upIn ease 1s 1s.5 backwards;
+}
+
+.siteDesc .imdbWrapper {
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+  display: flex;
+  align-items: center;
+  width: 150px;
+  cursor: pointer;
+  transition: ease 1s;
+}
+
+.siteDesc .imdbWrapper:hover {
+  transform: translateY(-13px);
+}
+
+.siteDesc .imdbWrapper img {
+  width: 150px;
+}
+
+.siteDesc .siteWrapper {
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: royalblue;
+  border-radius: 10px;
+  width: 150px;
+  height: 75.63px;
+  cursor: pointer;
+  transition: ease 1s;
+}
+
+.siteDesc .siteWrapper:hover {
+  transform: translateY(-13px);
+}
+
+.siteDesc .siteWrapper img {
+  width: 50px;
+}
+
+.favBtnWrapper {
+  animation: fadeIn ease 1s 1.9s backwards, upIn ease 1s 1s.9 backwards;
+
+  margin-top: 100px;
+  text-align: center;
+}
+
+/*Favoirites*/
+
+.favSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.favSection h1 {
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.avatarWrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  border: solid white;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+}
+
+.avatarWrapper img {
+  width: 200px;
+  transform: translateY(20px);
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes upIn {
+  0% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes upInImage {
+  0% {
+    transform: translate(-20%, 10%);
+  }
+  100% {
+    transform: translate(-20%, 0);
+  }
+}
