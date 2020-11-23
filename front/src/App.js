@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Favorites from "./components/Favorites";
 import { GlobalContext } from "./context/GlobalContext";
+require("dotenv").config();
 
 function App() {
   const { isAuth, loadUser } = useContext(GlobalContext);
