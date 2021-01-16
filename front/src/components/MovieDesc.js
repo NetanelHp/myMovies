@@ -14,7 +14,7 @@ const MovieDesc = (props) => {
   const [movieLoaded, setMovieLoaded] = useState(false);
   const [favorite, setFavorite] = useState(false);
 
-  const { addToFavorite, favMovies, deleteFromFavoite } = useContext(
+  const { addToFavorite, favMovies, deleteFromFavorite } = useContext(
     GlobalContext
   );
 
@@ -51,7 +51,7 @@ const MovieDesc = (props) => {
   };
 
   const onClickRemoveFavorite = () => {
-    deleteFromFavoite(id);
+    deleteFromFavorite(id);
     setFavorite(false);
   };
 

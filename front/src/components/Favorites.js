@@ -17,12 +17,15 @@ const Favorites = () => {
         <img src={user && user.avatar} alt="avatar" />
       </div>
       <h3 style={{ marginTop: 50 }}>Your favorite movies</h3>
-      <Grid container>
+      <Grid container className="favMoviesGrid">
         {favMovies &&
           favMovies.map((movie) => {
             return (
-              <Grid item xs={12} md={3}>
-                <Link to={`/movies/${movie.movieId}`}>
+              <Grid item xs={12} md={4} lg={3}>
+                <Link
+                  to={`/movies/${movie.movieId}`}
+                  style={{ textDecoration: "none" }}
+                >
                   <div className="favImageWrapper">
                     <h4>{movie.title}</h4>
                     <img src={favMovies && movie.poster} alt="fav" />

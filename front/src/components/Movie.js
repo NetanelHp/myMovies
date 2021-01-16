@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Movie = ({ movie }) => {
   return (
-    <Grid item xs={12} md={3}>
+    <Grid item xs={12} md={4} lg={3}>
       <div className="imageWraper">
         <Link to={`/movies/${movie.id}`}>
           <img

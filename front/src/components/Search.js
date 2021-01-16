@@ -20,7 +20,7 @@ const Search = () => {
     <div>
       <form onSubmit={onSubmit}>
         <OutlinedInput
-          placeholder="Eyal ha gever"
+          placeholder="Search you movie..."
           className="searchInput"
           variant="outlined"
           size="small"
