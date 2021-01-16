@@ -15,11 +15,7 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar
-      className="navBar"
-      position="static"
-      style={{ background: "transparent" }}
-    >
+    <AppBar className="navBar" position="fixed" style={{ background: "white" }}>
       <Toolbar className="toolBar">
         <MovieFilterIcon style={{ color: "black" }} />
         <Typography variant="h6" style={{ flexGrow: 1, color: "black" }}>
