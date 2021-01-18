@@ -1,6 +1,6 @@
 # myMovies
 
-##App demo
+## App demo
 https://fav-movies-app.herokuapp.com/
 
 Movies app built with MERN stack.
