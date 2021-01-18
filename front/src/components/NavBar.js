@@ -14,6 +14,11 @@ const NavBar = () => {
     setSideBar(!sideBar);
   };
 
+  const logOut = () => {
+    logout();
+    toggleSideBar();
+  };
+
   return (
     <AppBar className="navBar" position="fixed" style={{ background: "white" }}>
       <Toolbar className="toolBar">
@@ -41,10 +46,10 @@ const NavBar = () => {
             to="/favorites"
             style={{ textDecoration: "none" }}
           >
-            <Button>Favorites</Button>
+            <Button onClick={toggleSideBar}>Favorites</Button>
           </Link>
           <Link className="listItem" to="/" style={{ textDecoration: "none" }}>
-            <Button onClick={() => logout()}>Logout</Button>
+            <Button onClick={logOut}>Logout</Button>
           </Link>
         </div>
 
