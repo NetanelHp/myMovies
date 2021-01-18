@@ -6,7 +6,7 @@ https://fav-movies-app.herokuapp.com/
 Movies app built with MERN stack.
 
 Front:
-* ReactJs - Hooks, GlobalState, 
+* ReactJs - Hooks, GlobalState
 
 Back:
 * Nodejs
