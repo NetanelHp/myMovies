@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalContext";
+import { Redirect } from "react-router-dom";
 
 const Welcome = () => {
+  const { isAuth } = useContext(GlobalContext);
+
+  if (!isAuth) {
+    return <Redirect to="/" />;
+  }
+
   return (
     <div className="welcomeSection">
       <div className="heroTitle">

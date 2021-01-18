@@ -7,6 +7,7 @@ import { Button } from "@material-ui/core";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import ThumbDownAltIcon from "@material-ui/icons/ThumbDownAlt";
 import { GlobalContext } from "../context/GlobalContext";
+import { Redirect } from "react-router-dom";
 
 const MovieDesc = (props) => {
   const { id } = props.match.params;
@@ -14,7 +15,7 @@ const MovieDesc = (props) => {
   const [movieLoaded, setMovieLoaded] = useState(false);
   const [favorite, setFavorite] = useState(false);
 
-  const { addToFavorite, favMovies, deleteFromFavorite } = useContext(
+  const { addToFavorite, favMovies, deleteFromFavorite, isAuth } = useContext(
     GlobalContext
   );
 
@@ -54,6 +55,10 @@ const MovieDesc = (props) => {
     deleteFromFavorite(id);
     setFavorite(false);
   };
+
+  if (!isAuth) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <div className="movieDescSection">

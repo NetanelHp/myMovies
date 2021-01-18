@@ -1,15 +1,19 @@
 import { Grid } from "@material-ui/core";
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { GlobalContext } from "../context/GlobalContext";
 
 const Favorites = () => {
-  const { getFavorites, user, favMovies } = useContext(GlobalContext);
+  const { getFavorites, user, favMovies, isAuth } = useContext(GlobalContext);
 
   useEffect(() => {
     getFavorites();
     // eslint-disable-next-line
   }, []);
+
+  if (!isAuth) {
+    return <Redirect to="/" />;
+  }
   return (
     <div className="favSection">
       <h1>Hello {user && user.name}</h1>

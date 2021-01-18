@@ -3,12 +3,20 @@ import { GlobalContext } from "../context/GlobalContext";
 import Grid from "@material-ui/core/Grid";
 import Movie from "./Movie";
 import Search from "./Search";
+import { Redirect } from "react-router-dom";
+
 const MoviesList = () => {
-  const { getAllMovies, moviesList, loading } = useContext(GlobalContext);
+  const { getAllMovies, moviesList, loading, isAuth } = useContext(
+    GlobalContext
+  );
   useEffect(() => {
     getAllMovies();
     // eslint-disable-next-line
   }, []);
+
+  if (!isAuth) {
+    return <Redirect to="/" />;
+  }
   return (
     <div className="moviesSection">
       <h1>Explore Movies World</h1>
